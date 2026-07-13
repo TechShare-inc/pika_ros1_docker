@@ -1,0 +1,7 @@
+user_code/*
+!user_code/ts_example_start_multi_sensor.bash
+user_data/ts-example/*
+
+.vscode/
+
+.DS_Store

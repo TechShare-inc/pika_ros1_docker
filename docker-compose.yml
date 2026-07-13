@@ -1,0 +1,28 @@
+services:
+  ros1-noetic-pika-data:
+    build: .
+    container_name: ubuntu20-ros1-pika-data
+    command: bash
+    stdin_open: true
+    tty: true
+    privileged: true
+    volumes:
+      - ./user_data:/home/agilex/user_data
+      - ./user_code:/home/agilex/user_code
+      - ./dev_memo:/home/agilex/dev_memo
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /dev:/dev # 強力な権限付与しているので注意！！
+    working_dir: /home/agilex
+    network_mode: host
+    ipc: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - FORCE_RSUSB_BACKEND=true
+    devices:
+      - /dev:/dev
+      - /dev/bus/usb:/dev/bus/usb
+      - /run/udev:/run/udev:ro
+    group_add:
+      - "video"
+      - "dialout"
