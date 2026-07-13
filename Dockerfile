@@ -171,8 +171,6 @@ RUN apt-get update && apt-get install -y \
     v4l-utils \
     ffmpeg \
     cheese \
-    h5py \ 
-    dm_env \
     && rm -rf /var/lib/apt/lists/*
 
 # bashrcにROS, condaの初期化を追加
