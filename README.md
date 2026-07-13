@@ -49,6 +49,7 @@ sudo usermod -aG docker $USER
 newgrp docker
 sudo systemctl enable docker
 sudo systemctl start docker
+xhost +local:docker
 ```
 
 `Dockerfile`, `docker-compose.yml`のあるこのディレクトリで以下を実行：
