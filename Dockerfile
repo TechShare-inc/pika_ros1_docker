@@ -73,6 +73,7 @@ USER agilex
 WORKDIR ${HOME}
 RUN git clone https://github.com/agilexrobotics/pika_ros.git && \
     cd pika_ros && \
+    git checkout f40dc2868d87a6285d60524c37733101aa5785ee && \
     git submodule update --init --recursive
 
 # unpack and install librealsense, realsense-viewwer: took about 7 minutes (depends on CPU speed)
