@@ -55,8 +55,8 @@ xhost +local:docker
 `Dockerfile`, `docker-compose.yml`のあるこのディレクトリで以下を実行：
 
 ```bash
-docker-compose up --build -d # 初回：　環境により、10分以上かかる可能性あり
-docker-compose up -d # 2回目以降
+docker compose up --build -d # 初回：　環境により、10分以上かかる可能性あり
+docker compose up -d # 2回目以降
 ```
 
 一例として、VSCodeのDev Container拡張機能を利用する方法：
